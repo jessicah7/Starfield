@@ -42,7 +42,7 @@ void draw() {
   
   fill(200, 16, 46);
   ellipse(545, 300, 20, 20);
-  //triangle();
+
   for(int i = 0; i < star.length; i++) {
     star[i].show();
     star[i].move();
