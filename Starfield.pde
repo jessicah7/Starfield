@@ -13,7 +13,7 @@ void setup() {
 
 void draw() {
   background(180, 217, 239);
-  //pinata
+
   strokeWeight(2);
   stroke(255);
   line(456, 0, 443, 166);
@@ -59,7 +59,6 @@ class Particle {
     mySpeed = Math.random()*10;
   }
   void show() {
-    //candy 
     fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
     ellipse(myX, myY, 20, 20);
     triangle(myX - 20, myY + 10, myX - 5, myY, myX - 20, myY - 10);
