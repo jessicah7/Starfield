@@ -1,19 +1,19 @@
-Particle [] star = new Particle[250];
+Particle [] myStar = new Particle[250];
 
 void setup() {
   size(800,600);
   noStroke();
   for(int i = 0; i < 50; i++) {
-    star[i] = new OddballParticle();
+    myStar[i] = new OddballParticle();
   }
-  for(int i = 50; i < star.length; i++) {
-    star[i] = new Particle();
+  for(int i = 50; i < myStar.length; i++) {
+    myStar[i] = new Particle();
   }
 }
 
 void draw() {
   background(180, 217, 239);
-
+  //pinata
   strokeWeight(2);
   stroke(255);
   line(456, 0, 443, 166);
@@ -43,9 +43,9 @@ void draw() {
   fill(200, 16, 46);
   ellipse(545, 300, 20, 20);
 
-  for(int i = 0; i < star.length; i++) {
-    star[i].show();
-    star[i].move();
+  for(int i = 0; i < myStar.length; i++) {
+    myStar[i].show();
+    myStar[i].move();
   }
 }
 
@@ -59,6 +59,7 @@ class Particle {
     mySpeed = Math.random()*10;
   }
   void show() {
+    //candy 
     fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
     ellipse(myX, myY, 20, 20);
     triangle(myX - 20, myY + 10, myX - 5, myY, myX - 20, myY - 10);
@@ -84,7 +85,7 @@ class OddballParticle extends Particle {
   }
   
   void move() {
-    myX = myX + (int)(Math.cos(myAngle)*mySpeed);
+     myX = myX + (int)(Math.cos(myAngle)*mySpeed);
      myY = myY + (int)(Math.sin(myAngle)*mySpeed);
      
      if(myX > 800 || myX < 0) 
